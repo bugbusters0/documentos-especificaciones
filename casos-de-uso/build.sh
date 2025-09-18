@@ -31,21 +31,21 @@ pandoc main.md especificaciones.md \
   --variable citecolor:blue \
   --variable inputenc:utf8 \
   --variable fontenc:T1 \
-  -o output/doc-ejecucion.pdf
+  -o output/doc-especificaciones-casosdeuso.pdf
 
 if [ $? -eq 0 ]; then
-    echo "✅ Documento compilado exitosamente: output/doc-ejecucion.pdf"
+    echo "✅ Documento compilado exitosamente: output/doc-especificaciones-casosdeuso.pdf"
     echo "📄 Abriendo PDF..."
     
     # # Intentar abrir el PDF (funciona en la mayoría de sistemas Linux)
     # if command -v xdg-open &> /dev/null; then
-    #     xdg-open output/doc-ejecucion.pdf
+    #     xdg-open output/doc-especificaciones-casosdeuso.pdf
     # elif command -v evince &> /dev/null; then
-    #     evince output/doc-ejecucion.pdf &
+    #     evince output/doc-especificaciones-casosdeuso.pdf &
     # elif command -v okular &> /dev/null; then
-    #     okular output/doc-ejecucion.pdf &
+    #     okular output/doc-especificaciones-casosdeuso.pdf &
     # else
-    #     echo "📁 El archivo está en: $(pwd)/output/doc-ejecucion.pdf"
+    #     echo "📁 El archivo está en: $(pwd)/output/doc-especificaciones-casosdeuso.pdf"
     # fi
 else
     echo "❌ Error al compilar el documento"

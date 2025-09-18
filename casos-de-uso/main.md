@@ -1,5 +1,5 @@
 ---
-title: "Documento de Ejecución del Software ARKA"
+title: "Documento de especificaciones de casos de uso - ARKA"
 author:
   - "Concha Castro, Ana Cecilia"
   - "Cornejo Castro, José Gabriel"
