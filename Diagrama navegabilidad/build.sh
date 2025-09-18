@@ -16,7 +16,7 @@ fi
 mkdir -p output
 
 # Compilar el documento principal con todas las secciones
-pandoc main.md especificaciones.md \
+pandoc main.md desarrollo.md \
   --include-in-header=header.tex \
   --pdf-engine=pdflatex \
   --number-sections \
