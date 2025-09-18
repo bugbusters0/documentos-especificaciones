@@ -14,6 +14,12 @@
 
 
 
+| ID        | Nombre         | Descripción                                                | Restricciones / Reglas / Validaciones                               |
+| ----------| ---------------|------------------------------------------------------------|---------------------------------------------------------------------|
+| GUI.1     | Inicio Sesión  |Esta interfaz permite al usuario ingresar a la aplicación aaaaaaaaasdasdasdasdaskdjlaksjdaskd  | 1. El correo electrónico es obligatorio y debe tener formato válido.|
+
+
+
 **TABLA I: INTERFAZ DE USUARIO – INICIO DE SESIÓN**
 
 | Campo | Descripción|
