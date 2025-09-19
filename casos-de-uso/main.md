@@ -34,5 +34,3 @@ Este documento proporciona una base integral para la comprensión, validación y
 **Palabras clave:** Arka, gestión de economía familiar, requisitos de software, análisis de sistemas, diseño de software, UML, finanzas personales.
 
 \newpage
-
-# Especificaciones de casos de Uso

@@ -31,6 +31,8 @@ pandoc main.md especificaciones.md \
   --variable citecolor:blue \
   --variable inputenc:utf8 \
   --variable fontenc:T1 \
+  --variable block-headings \
+  --variable tables=longtabu \
   -o output/doc-especificaciones-casosdeuso.pdf
 
 if [ $? -eq 0 ]; then

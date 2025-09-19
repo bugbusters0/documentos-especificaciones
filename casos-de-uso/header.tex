@@ -4,6 +4,27 @@
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{graphicx}
+
+% MEJORAS PARA TABLAS LARGAS
+\usepackage{longtable}
+\usepackage{ltxtable} % Combina longtable con tabularx
+\usepackage{array}
+\usepackage{booktabs}
+
+% Configuración mejorada para longtable
+\setlength\LTleft{0pt}
+\setlength\LTright{0pt}
+\setlength\LTpre{1em}
+\setlength\LTpost{1em}
+
+% Evitar cortes de página problemáticos
+\usepackage{needspace}
+
+% Mejorar el control de saltos de página
+\clubpenalty=10000  % Evita líneas huérfanas
+\widowpenalty=10000 % Evita líneas viudas
+\brokenpenalty=10000 % Penaliza cortes de página en lugares inapropiados
+
 \usepackage{xcolor}
 
 % Configuración de página
@@ -86,34 +107,28 @@
 \setlist[itemize]{leftmargin=*}
 \setlist[enumerate]{leftmargin=*}
 
-% Mejor formato para tablas
-\usepackage{booktabs}
-\usepackage{longtable}
-\usepackage{array}
-
 % Configuración de enlaces
 \usepackage[colorlinks=true,linkcolor=darkblue,urlcolor=darkblue,citecolor=darkblue]{hyperref}
 
 % Configuración para código
 \usepackage{listings}
-\usepackage{xcolor}
 
 \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{lightgray!20},   
+    backgroundcolor=\color{lightgray!20},      
     commentstyle=\color{darkgreen},
     keywordstyle=\color{blue},
     numberstyle=\tiny\color{gray},
     stringstyle=\color{red},
     basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
+    breakatwhitespace=false,             
+    breaklines=true,                     
+    captionpos=b,                        
+    keepspaces=true,                     
+    numbers=left,                        
+    numbersep=5pt,                      
+    showspaces=false,                    
     showstringspaces=false,
-    showtabs=false,                  
+    showtabs=false,                      
     tabsize=2
 }
 
