@@ -25,12 +25,8 @@ numbersections: true
 
 ## RESUMEN
 
-El presente documento describe el proceso de desarrollo del sistema software de gestión de economía familiar Arka, una plataforma orientada a facilitar la organización y control de los ingresos, egresos y presupuestos en el ámbito doméstico. Se detallan los requisitos funcionales y no funcionales, así como los modelos de análisis, incluyendo casos de uso, mockups y diagramas de clases.
+El presente documento describe las especificaciones de todos los casos de uso del sistema de software de gestión de economía familiar Arka. Se detallarán las especificaciones, su funcionamiento y como es el flujo en cada caso de uso.
 
-A nivel de diseño, se presentan los diagramas de secuencia y clases de diseño que definen la arquitectura técnica del sistema. Asimismo, se incorpora una sección administrativa que documenta las interfaces de usuario y administrador, junto con el diccionario de base de datos.
-
-Este documento proporciona una base integral para la comprensión, validación y futura implementación de Arka.
-
-**Palabras clave:** Arka, gestión de economía familiar, requisitos de software, análisis de sistemas, diseño de software, UML, finanzas personales.
+**Palabras clave:** Arka, gestión de economía familiar, casos de uso.
 
 \newpage
