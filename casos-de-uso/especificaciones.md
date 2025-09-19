@@ -1011,7 +1011,7 @@ Ninguno \\
 \needspace{15\baselineskip}
 \textbf{Flujo Principal} \\
 \begin{enumerate}[leftmargin=*]
-\item Hereda los pasos 1-4 y 7 de CU-016.
+\item Hereda los pasos 1-4 y 7 de CU-013.
 \item Extensión agregar miembro:
 \begin{enumerate}
 \item En la ventana de registro aparecerán los campos:
@@ -1028,7 +1028,7 @@ Ninguno \\
 \item Límite (se ingresa sólo números indicando el límite)
 \item Consumo actual (el sistema mostrará cuánto ya van gastando actualmente en ese concepto)
 \end{itemize}
-\item El sistema validará si los datos fueron ingresados correctamente y se llamará al caso de uso Asignar límite de usuario (CU-015).
+\item El sistema validará si los datos fueron ingresados correctamente y se llamará al caso de uso Asignar límite de usuario (CU-017).
 \item Si el sistema valida correctamente los datos:
 \begin{enumerate}
 \item Se guardarán los datos en la base de datos
@@ -1054,5 +1054,357 @@ Ninguno \\
 
 \textbf{Prioridad} \\
 Alta \\
+\hline
+\end{longtable}
+
+## CU-017 Editar Miembro (Generalización de CU-013)
+
+\begin{longtable}{|p{16cm}|}
+\hline
+\textbf{Caso de uso: Editar Miembro (Generalización de CU-013)} \\
+CU-017 \\
+\hline
+\endfirsthead
+
+% Encabezado para páginas siguientes
+\hline
+\textbf{Caso de uso: Editar Miembro (Generalización de CU-013) (continuación)} \\
+CU-017 \\
+\hline
+\endhead
+
+% Pie para páginas que continúan
+\hline
+\multicolumn{1}{|r|}{\textit{Continúa en la siguiente página...}} \\
+\hline
+\endfoot
+
+% Pie final
+\hline
+\endlastfoot
+
+\textbf{Breve Descripción} \\
+Especialización de "Gestionar Miembros" para editar un miembro familiar del grupo, asignando rol y límites iniciales. Hereda el flujo genérico y detalla la acción de creación. \\
+\hline
+
+\textbf{Actores principales} \\
+Administrador \\
+\hline
+
+\textbf{Actores secundarios} \\
+Ninguno \\
+\hline
+
+\textbf{Precondiciones} \\
+\begin{enumerate}[leftmargin=*]
+\item El actor (Administrador) debe estar autenticado.
+\item El actor accede a la GUI de perfiles.
+\end{enumerate} \\
+\hline
+
+\needspace{15\baselineskip}
+\textbf{Flujo Principal} \\
+\begin{enumerate}[leftmargin=*]
+\item Hereda los pasos 1-4 y 7 de CU-013.
+\item El actor seleccionará el usuario y el botón editar para modificar sus datos:
+\begin{enumerate}
+\item En la ventana de editar miembro aparecerán los campos con los datos llenados del usuario:
+\begin{itemize}
+\item Nombre (solo se permiten caracteres alfabéticos [A-Za-z])
+\item Fecha de nacimiento
+\item Rol (se selecciona un rol: miembro o administrador)
+\item Contraseña (la contraseña estará vacía)
+\end{itemize}
+\item Si se llenan los datos de la contraseña:
+\begin{itemize}
+\item Contraseña: Mínimo 5 caracteres, con al menos 1 mayúscula, 1 número y 1 carácter especial (.,:[]{}\*+./\#\$\%\&/()=?¿¡!~).
+\item Se cambiará la contraseña actual por la ingresada
+\end{itemize}
+\item Si no se llenan los datos de la contraseña (Else), no se actualiza la contraseña.
+\item Se mostrará el listado de conceptos y límites del usuario con los datos del usuario:
+\begin{itemize}
+\item Concepto (se selecciona un concepto existente)
+\item Periodo (se escoge la frecuencia: mensual, diaria, semanal)
+\item Límite (se ingresa sólo números indicando el límite)
+\item Consumo actual (el sistema mostrará cuánto ya van gastando actualmente en ese concepto)
+\end{itemize}
+\item Aparecerá un botón que diga "agregar nuevo límite de gasto" para agregar límites a cada usuario por concepto, si el usuario hace click ahí aparecerán los campos:
+\begin{itemize}
+\item Concepto (se selecciona un concepto existente)
+\item Periodo (se escoge la frecuencia: mensual, diaria, semanal)
+\item Límite (se ingresa sólo números indicando el límite)
+\item Consumo actual (el sistema mostrará cuánto ya van gastando actualmente en ese concepto)
+\end{itemize}
+\item El usuario le dará click en el botón guardar datos:
+\begin{enumerate}
+\item El sistema validará los datos del usuario que estén correctamente ingresados.
+\item El sistema validará si los datos fueron ingresados correctamente en la parte de límite y se llamará al caso de uso Asignar límite de usuario (CU-017).
+\item Si el sistema valida correctamente los datos:
+\begin{enumerate}
+\item Se guardarán los datos en la base de datos.
+\item Se cambian los datos del usuario por los ingresados.
+\item Se mostrará una alerta que indique que el proceso ha sido exitoso.
+\end{enumerate}
+\item Si no (Else):
+\begin{enumerate}
+\item Se mostrará una alerta indicando que hubo un error con los datos.
+\item Se resaltará en rojo los inputs con los datos que no pasaron la validación.
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+\end{enumerate} \\
+\hline
+
+\textbf{Postcondiciones} \\
+Ninguna \\
+\hline
+
+\textbf{Flujos Alternativos} \\
+Ninguno \\
+\hline
+
+\textbf{Prioridad} \\
+Alta \\
+\hline
+\end{longtable}
+
+## CU-016 Deshabilitar Miembro (Generalización de CU-013)
+
+\begin{longtable}{|p{16cm}|}
+\hline
+\textbf{Caso de uso: Deshabilitar Miembro (Generalización de CU-013)} \\
+CU-016 \\
+\hline
+\endfirsthead
+
+% Encabezado para páginas siguientes
+\hline
+\textbf{Caso de uso: Deshabilitar Miembro (Generalización de CU-013) (continuación)} \\
+CU-016 \\
+\hline
+\endhead
+
+% Pie para páginas que continúan
+\hline
+\multicolumn{1}{|r|}{\textit{Continúa en la siguiente página...}} \\
+\hline
+\endfoot
+
+% Pie final
+\hline
+\endlastfoot
+
+\textbf{Breve Descripción} \\
+Especialización de "Gestionar Miembros" para deshabilitar un miembro familiar del grupo, asignando rol y límites iniciales. Hereda el flujo genérico y detalla la acción de creación. \\
+\hline
+
+\textbf{Actores principales} \\
+Administrador \\
+\hline
+
+\textbf{Actores secundarios} \\
+Ninguno \\
+\hline
+
+\textbf{Precondiciones} \\
+\begin{enumerate}[leftmargin=*]
+\item El actor (Administrador) debe estar autenticado.
+\item El actor accede a la GUI de perfiles.
+\end{enumerate} \\
+\hline
+
+\needspace{15\baselineskip}
+\textbf{Flujo Principal} \\
+\begin{enumerate}[leftmargin=*]
+\item Hereda los pasos 1-4 y 7 de CU-013.
+\item El actor seleccionará el usuario y el botón de deshabilitar usuario:
+\begin{enumerate}
+\item Se mostrará una alerta para confirmar esta acción.
+\item Si el usuario selecciona en aceptar:
+\begin{itemize}
+\item Este usuario seleccionado se actualizará en la base de datos en un campo deleteAt el cual dejará de ser NULL y tendrá la fecha en la que se ejecutó esa acción.
+\item El sistema marca como inactivo al usuario.
+\item Aparecerá un mensaje indicando que el proceso fue exitoso.
+\end{itemize}
+\item Else, se cierra la alerta.
+\end{enumerate}
+\end{enumerate} \\
+\hline
+
+\textbf{Postcondiciones} \\
+Ninguna \\
+\hline
+
+\textbf{Flujos Alternativos} \\
+Ninguno \\
+\hline
+
+\textbf{Prioridad} \\
+Alta \\
+\hline
+\end{longtable}
+
+## CU-017 Asignar límites de sobrepresupuesto
+
+\begin{longtable}{|p{16cm}|}
+\hline
+\textbf{Caso de uso: Asignar Límites de Sobrepresupuesto} \\
+CU-017 \\
+\hline
+\endfirsthead
+
+% Encabezado para páginas siguientes
+\hline
+\textbf{Caso de uso: Asignar Límites de Sobrepresupuesto (continuación)} \\
+CU-017 \\
+\hline
+\endhead
+
+% Pie para páginas que continúan
+\hline
+\multicolumn{1}{|r|}{\textit{Continúa en la siguiente página...}} \\
+\hline
+\endfoot
+
+% Pie final
+\hline
+\endlastfoot
+
+\textbf{Breve Descripción} \\
+Permite que el usuario defina un límite de gasto máximo (sobrepresupuesto) para un miembro o para un concepto específico de la economía familiar. El sistema registra el límite y, opcionalmente, activa una notificación cuando dicho límite se alcanza o supera \\
+\hline
+
+\textbf{Actores principales} \\
+Miembro familiar \\
+\hline
+
+\textbf{Actores secundarios} \\
+Ninguno \\
+\hline
+
+\textbf{Precondiciones} \\
+\begin{enumerate}[leftmargin=*]
+\item El usuario debe haber iniciado sesión.
+\item Debe existir al menos un miembro y un concepto previamente creado.
+\item El usuario debe tener permisos para editar o asignar límites.
+\end{enumerate} \\
+\hline
+
+\needspace{15\baselineskip}
+\textbf{Flujo Principal} \\
+\begin{enumerate}[leftmargin=*]
+\item El usuario selecciona la opción de Asignar Límite en la aplicación para un miembro o concepto en específico.
+\item El sistema muestra la lista de miembros y/o conceptos disponibles.
+\item El usuario selecciona el miembro o concepto al que desea asignar el límite.
+\item El usuario ingresa el valor del límite (ejemplo: S/300).
+\item El sistema valida que el valor ingresado sea numérico y mayor que cero.
+\item El usuario confirma la acción.
+\item Si el usuario marca la opción para activar notificaciones al alcanzar el límite, se deriva al caso de uso CU-014.
+\item El sistema guarda el límite en la base de datos.
+\item El sistema confirma que el límite ha sido asignado correctamente.
+\end{enumerate} \\
+\hline
+
+\textbf{Postcondiciones} \\
+\begin{enumerate}[leftmargin=*]
+\item El límite queda registrado en el sistema y asociado al miembro/concepto.
+\item Si se activó la notificación, queda configurado el evento para ser disparado cuando se alcance el umbral.
+\end{enumerate} \\
+\hline
+
+\textbf{Flujos Alternativos} \\
+\begin{itemize}[leftmargin=*]
+\item El usuario selecciona la opción "Añadir notificación" desde la pestaña donde estableció el límite de sobrepresupuesto.
+\item El sistema muestra las opciones de eventos disponibles para asociar la notificación (Umbral de días antes o de monto máximo).
+\item El usuario selecciona el evento deseado (ej.: "cuando se supere el límite de S/300").
+\item El usuario confirma que desea recibir alertas por email.
+\item El sistema valida la dirección de correo asociada al usuario.
+\item El sistema guarda la configuración de la notificación.
+\item El sistema muestra un mensaje de confirmación indicando que la notificación ha sido añadida exitosamente.
+\end{itemize} \\
+\hline
+
+\textbf{Prioridad} \\
+Ninguna \\
+\hline
+\end{longtable}
+
+## CU-018 Ver Perfil
+
+\begin{longtable}{|p{16cm}|}
+\hline
+\textbf{Caso de uso: Ver Perfil} \\
+CU-018 \\
+\hline
+\endfirsthead
+
+% Encabezado para páginas siguientes
+\hline
+\textbf{Caso de uso: Ver Perfil (continuación)} \\
+CU-018 \\
+\hline
+\endhead
+
+% Pie para páginas que continúan
+\hline
+\multicolumn{1}{|r|}{\textit{Continúa en la siguiente página...}} \\
+\hline
+\endfoot
+
+% Pie final
+\hline
+\endlastfoot
+
+\textbf{Breve Descripción} \\
+Permite al usuario ver su perfil y editar sus datos como nombre, foto de perfil y contraseña \\
+\hline
+
+\textbf{Actores principales} \\
+Miembro familiar \\
+\hline
+
+\textbf{Actores secundarios} \\
+Ninguno \\
+\hline
+
+\textbf{Precondiciones} \\
+\begin{enumerate}[leftmargin=*]
+\item El usuario debe haber iniciado sesión.
+\end{enumerate} \\
+\hline
+
+\needspace{15\baselineskip}
+\textbf{Flujo Principal} \\
+\begin{enumerate}[leftmargin=*]
+\item El usuario selecciona la opción de Perfil en el menú.
+\item El sistema muestra sus datos, y solo podrá editar su contraseña.
+\item Si el usuario quiere editar su contraseña:
+\begin{enumerate}
+\item Apretará el botón de lápiz para editar y escribirá su nueva contraseña.
+\item El sistema validará la nueva contraseña (debe cumplir con los requisitos: mínimo 5 caracteres, 1 mayúscula, 1 número, 1 carácter especial).
+\item Si la validación es correcta, se guardará la nueva contraseña y se mostrará un mensaje de éxito.
+\item Si la validación falla, se mostrará un mensaje de error y se resaltarán los campos incorrectos.
+\end{enumerate}
+\item Si el usuario quiere editar su límite de gasto:
+\begin{enumerate}
+\item Podrá seleccionar los inputs que quiere editar.
+\item Modificará los datos pertinentes.
+\item Para guardarlos, apretará en el botón de check.
+\item Se enviarán los datos a validación; si los datos son correctos, se guardarán.
+\item Si no son correctos, se mostrará un mensaje de error en los campos que no pasaron la validación.
+\end{enumerate}
+\end{enumerate} \\
+\hline
+
+\textbf{Postcondiciones} \\
+Ninguna \\
+\hline
+
+\textbf{Flujos Alternativos} \\
+Ninguno \\
+\hline
+
+\textbf{Prioridad} \\
+Ninguna \\
 \hline
 \end{longtable}
