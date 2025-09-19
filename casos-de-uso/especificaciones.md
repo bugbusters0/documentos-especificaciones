@@ -262,6 +262,7 @@ Ninguno \\
 \end{enumerate} \\
 \hline
 
+\needspace{15\baselineskip}
 \textbf{Flujos Alternativos} \\
 \begin{itemize}[leftmargin=*]
 \item \textbf{A1. Sin datos disponibles:}
@@ -272,58 +273,7 @@ Ninguno \\
 \begin{itemize}
 \item El sistema muestra un mensaje de error y sugiere reintentar.
 \end{itemize}
-\end{itemize} \\
-\hline
-\end{longtable}
-
-## CU-005 Visualizar Gráficos
-
-\begin{longtable}{|p{16cm}|}
-\hline
-\textbf{Caso de uso: Visualizar Gráficos} \\
-CU-005 \\
-\hline
-\endfirsthead
-
-% Encabezado para páginas siguientes
-\hline
-\textbf{Caso de uso: Visualizar Gráficos (continuación)} \\
-CU-005 \\
-\hline
-\endhead
-
-% Pie para páginas que continúan
-\hline
-\multicolumn{1}{|r|}{\textit{Continúa en la siguiente página...}} \\
-\hline
-\endfoot
-
-% Pie final
-\hline
-\endlastfoot
-
-\textbf{Breve Descripción} \\
-Permite al usuario visualizar de manera gráfica (diagramas y gráficos interactivos) los ingresos, egresos y balances previamente consultados en el caso de uso Consultar Balance (por fecha o por concepto) \\
-\hline
-
-\textbf{Actores principales} \\
-Miembro Familiar \\
-\hline
-
-\textbf{Actores secundarios} \\
-Ninguno \\
-\hline
-
-\textbf{Precondiciones} \\
-\begin{enumerate}[leftmargin=*]
-\item El usuario debe haber iniciado sesión.
-\item El usuario debe haber accedido previamente a Consultar Balance (CU-004).
-\end{enumerate} \\
-\hline
-
-% Control de salto de página antes del flujo principal
-\needspace{15\baselineskip}
-\textbf{Flujo Principal} \\
+\item \textbf{B. Visualización de datos:}
 \begin{enumerate}[leftmargin=*]
 \item El usuario selecciona la pestaña o botón "Gráficos" en la pantalla de Balance.
 \item El sistema carga los datos previamente obtenidos en la consulta (ingresos, egresos, balances).
@@ -343,31 +293,25 @@ Ninguno \\
 \item El sistema muestra únicamente gráficos basados en sus propios datos.
 \end{enumerate}
 \item El usuario puede cambiar entre diferentes tipos de gráficos mediante pestañas o botones de control.
-\end{enumerate} \\
+\end{enumerate}
+\end{itemize} \\
 \hline
 
-\textbf{Postcondiciones} \\
-Ninguna \\
-\hline
-
-\textbf{Flujos Alternativos} \\
-Ninguno \\
-\hline
 \end{longtable}
 
-## CU-006 Gestionar Conceptos (Abstracto)
+## CU-005 Gestionar Conceptos (Abstracto)
 
 \begin{longtable}{|p{16cm}|}
 \hline
 \textbf{Caso de uso: Gestionar Conceptos (Abstracto)} \\
-CU-006 \\
+CU-005 \\
 \hline
 \endfirsthead
 
 % Encabezado para páginas siguientes
 \hline
 \textbf{Caso de uso: Gestionar Conceptos (Abstracto) (continuación)} \\
-CU-006 \\
+CU-005 \\
 \hline
 \endhead
 
@@ -403,7 +347,7 @@ Ninguno \\
 \textbf{Flujo Principal} \\
 \begin{enumerate}[leftmargin=*]
 \item Este caso es abstracto y se especializa en subcasos específicos.
-\item El miembro al acceder a Conceptos (GUI3) tiene la opción de crear un Nuevo concepto (CU-007) o Editar un concepto existente (CU-008).
+\item El miembro al acceder a Conceptos (GUI3) tiene la opción de crear un Nuevo concepto (CU-006) o Editar un concepto existente (CU-007).
 \end{enumerate} \\
 \hline
 
@@ -416,19 +360,19 @@ Ninguno \\
 \hline
 \end{longtable}
 
-## CU-007 Crear Concepto
+## CU-006 Crear Concepto
 
 \begin{longtable}{|p{16cm}|}
 \hline
 \textbf{Caso de uso: Crear Concepto} \\
-CU-007 \\
+CU-006 \\
 \hline
 \endfirsthead
 
 % Encabezado para páginas siguientes
 \hline
 \textbf{Caso de uso: Crear Concepto (continuación)} \\
-CU-007 \\
+CU-006 \\
 \hline
 \endhead
 
@@ -465,7 +409,7 @@ Ninguno \\
 \begin{enumerate}[leftmargin=*]
 \item El miembro selecciona "Nuevo" en la sección Conceptos (GUI3).
 \item El miembro ingresa el nombre, tipo (ingreso/egreso), periodo ('Diario', 'Semanal', 'Mensual' u 'Ocasional') y presupuesto (si aplica).
-\item El miembro puede limitar el monto de gasto para el concepto si es de tipo 'Egreso' y periodo diferente a 'Diario' (CU-015).
+\item El miembro puede limitar el monto de gasto para el concepto si es de tipo 'Egreso' y periodo diferente a 'Diario' (CU-018).
 \item El sistema guarda el concepto.
 \end{enumerate} \\
 \hline
@@ -485,19 +429,19 @@ Gestionar conceptos \\
 \hline
 \end{longtable}
 
-## CU-008 Editar Concepto
+## CU-007 Editar Concepto
 
 \begin{longtable}{|p{16cm}|}
 \hline
 \textbf{Caso de uso: Editar Concepto} \\
-CU-008 \\
+CU-007 \\
 \hline
 \endfirsthead
 
 % Encabezado para páginas siguientes
 \hline
 \textbf{Caso de uso: Editar Concepto (continuación)} \\
-CU-008 \\
+CU-007 \\
 \hline
 \endhead
 
@@ -535,7 +479,7 @@ Ninguno \\
 \begin{enumerate}[leftmargin=*]
 \item El miembro selecciona "Editar" en un concepto existente (GUI3).
 \item El miembro modifica los detalles (nombre, tipo, periodo, presupuesto).
-\item El miembro puede limitar el monto de gasto para el concepto si es de tipo 'Egreso' y periodo diferente a 'Diario' (CU-015).
+\item El miembro puede limitar el monto de gasto para el concepto si es de tipo 'Egreso' y periodo diferente a 'Diario' (CU-018).
 \item El sistema actualiza el concepto.
 \end{enumerate} \\
 \hline
@@ -550,6 +494,74 @@ Ninguno \\
 Ninguno \\
 \hline
 \end{longtable}
+
+## CU-008 Deshabilitar Concepto
+
+\begin{longtable}{|p{16cm}|}
+\hline
+\textbf{Caso de uso: Deshabilitar Concepto} \\
+CU-008 \\
+\hline
+\endfirsthead
+
+% Encabezado para páginas siguientes
+\hline
+\textbf{Caso de uso: Deshabilitar Concepto (continuación)} \\
+CU-008 \\
+\hline
+\endhead
+
+% Pie para páginas que continúan
+\hline
+\multicolumn{1}{|r|}{\textit{Continúa en la siguiente página...}} \\
+\hline
+\endfoot
+
+% Pie final
+\hline
+\endlastfoot
+
+\textbf{Breve Descripción} \\
+Permite al miembro deshabilitar un concepto existente \\
+\hline
+
+\textbf{Actores principales} \\
+Miembro Familiar \\
+\hline
+
+\textbf{Actores secundarios} \\
+Ninguno \\
+\hline
+
+\textbf{Precondiciones} \\
+\begin{enumerate}[leftmargin=*]
+\item El usuario debe haber iniciado sesión.
+\item Debe existir al menos un concepto previamente creado.
+\end{enumerate} \\
+\hline
+
+\needspace{15\baselineskip}
+\textbf{Flujo Principal} \\
+\begin{enumerate}[leftmargin=*]
+\item El usuario selecciona "Eliminar" en un concepto existente.
+\item El sistema le mostrara un popup donde le preguntara al usuario si realmente quiere eliminar el concepto.
+\item If el usuario le da cancelar, solo se cerrará el popup
+\item Else se deshabilitará en el sistema ese concepto mediante un soft delete.
+\end{enumerate} \\
+\hline
+
+\textbf{Postcondiciones} \\
+\begin{enumerate}[leftmargin=*]
+\item El concepto seleccionado ha sido deshabilitado, es decir que no será visible para el usuario.
+\end{enumerate} \\
+\hline
+
+\textbf{Flujos Alternativos} \\
+Ninguno \\
+\hline
+\end{longtable}
+
+\newpage
 
 ## CU-009 Gestionar Movimientos Diarios (Abstracto)
 
@@ -630,6 +642,8 @@ Ninguno \\
 \hline
 \end{longtable}
 
+\newpage
+
 ## CU-010 Añadir Movimiento
 
 \begin{longtable}{|p{16cm}|}
@@ -683,7 +697,7 @@ Ninguno \\
 \item El sistema muestra el formulario: Monto, Conceptos (lista), Detalles (opcional) y el botón añadir.
 \item El usuario ingresa el Monto.
 \item El usuario selecciona un Concepto de la lista.
-\item Si el usuario selecciona el símbolo (+), se deriva al caso de uso Crear Concepto (CU-007).
+\item Si el usuario selecciona el símbolo (+), se deriva al caso de uso Crear Concepto (CU-006).
 \item (Opcional) El usuario ingresa Detalles textuales.
 \item El usuario presiona el botón añadir.
 \item El sistema valida la información (monto > 0).
@@ -705,7 +719,7 @@ Ninguno \\
 
 \textbf{Flujos Alternativos} \\
 \begin{itemize}[leftmargin=*]
-\item \textbf{A1. Crear un nuevo concepto:} Invoca a CU-007 Crear Concepto y retorna al paso 4.
+\item \textbf{A1. Crear un nuevo concepto:} Invoca a CU-006 Crear Concepto y retorna al paso 4.
 \item \textbf{A2. Monto o concepto inválido:} Si el monto no es válido o falta concepto, el sistema muestra un mensaje de error y retorna al paso 3.
 \end{itemize} \\
 \hline
@@ -771,7 +785,7 @@ Ninguno \\
 \item El sistema carga la información del movimiento en el panel izquierdo.
 \item El usuario modifica los campos necesarios: Monto, Concepto, Detalles.
 \begin{itemize}
-\item Si el usuario selecciona el símbolo (+) en la lista de conceptos, se invoca el caso de uso CU-007.
+\item Si el usuario selecciona el símbolo (+) en la lista de conceptos, se invoca el caso de uso CU-006.
 \end{itemize}
 \item El botón guardar se activa.
 \item El usuario presiona guardar.
@@ -794,7 +808,7 @@ Ninguno \\
 
 \textbf{Flujos Alternativos} \\
 \begin{itemize}[leftmargin=*]
-\item \textbf{A1. Crear un nuevo concepto:} Invoca a CU-007 Crear Concepto y retorna al paso 4.
+\item \textbf{A1. Crear un nuevo concepto:} Invoca a CU-006 Crear Concepto y retorna al paso 4.
 \item \textbf{A2. Monto inválido:} Si el monto no es válido, el sistema muestra un mensaje de error y retorna al paso 4.
 \end{itemize} \\
 \hline
@@ -878,18 +892,18 @@ Ninguno \\
 \hline
 \end{longtable}
 
-## CU-013 Deshabilitar Concepto
+## CU-013 Gestionar miembros (Caso abstracto)
 
 \begin{longtable}{|p{16cm}|}
 \hline
-\textbf{Caso de uso: Deshabilitar Concepto} \\
+\textbf{Caso de uso: Gestionar miembros (Caso abstracto)} \\
 CU-013 \\
 \hline
 \endfirsthead
 
 % Encabezado para páginas siguientes
 \hline
-\textbf{Caso de uso: Deshabilitar Concepto (continuación)} \\
+\textbf{Caso de uso: Gestionar miembros (Caso abstracto) (continuación)} \\
 CU-013 \\
 \hline
 \endhead
@@ -905,11 +919,11 @@ CU-013 \\
 \endlastfoot
 
 \textbf{Breve Descripción} \\
-Permite al miembro deshabilitar un concepto \\
+Este caso de uso abstracto define el comportamiento común para gestionar miembros de la familia en la app, incluyendo acceso a la lista de miembros, validación de permisos y actualización de datos. No se ejecuta directamente; es la base generalizada para sub-casos como añadir, editar o deshabilitar miembros. \\
 \hline
 
 \textbf{Actores principales} \\
-Miembro Familiar \\
+Administrador \\
 \hline
 
 \textbf{Actores secundarios} \\
@@ -918,48 +932,49 @@ Ninguno \\
 
 \textbf{Precondiciones} \\
 \begin{enumerate}[leftmargin=*]
-\item El usuario debe haber iniciado sesión.
-\item Debe existir al menos un concepto previamente creado.
+\item El actor (Administrador) debe estar autenticado.
+\item El actor accede a la ventana de perfiles.
 \end{enumerate} \\
 \hline
 
 \needspace{15\baselineskip}
 \textbf{Flujo Principal} \\
 \begin{enumerate}[leftmargin=*]
-\item El miembro selecciona "Editar" en un concepto existente.
-\item El miembro selecciona "Deshabilitar" en un concepto.
-\item El miembro confirma la Deshabilitación.
-\item El sistema deshabilita el concepto y actualiza los registros asociados.
+\item El administrador accede al módulo de perfiles desde el dashboard.
+\item El sistema muestra la lista actual de miembros familiares (datos a mostrar: nombre).
+\item El administrador selecciona una acción específica (e.g., añadir, editar, deshabilitar; detalle en sub-usos).
+\item El sistema valida los permisos del administrador.
+\item El sistema ejecuta la acción seleccionada (definida en el sub-caso correspondiente).
+\item El sistema actualiza la lista de miembros y muestra un mensaje de confirmación genérico.
+\item El administrador confirma o cierra la vista.
 \end{enumerate} \\
 \hline
 
 \textbf{Postcondiciones} \\
-\begin{enumerate}[leftmargin=*]
-\item El concepto seleccionado ha sido deshabilitado, es decir que no será visible para el usuario.
-\end{enumerate} \\
+Ninguna \\
 \hline
 
 \textbf{Flujos Alternativos} \\
 Ninguno \\
 \hline
 
-\textbf{Incluye} \\
-Gestionar Conceptos \\
+\textbf{Prioridad} \\
+Alta \\
 \hline
 \end{longtable}
 
-## CU-014 Añadir Notificación
+## CU-014 Añadir Miembro (Generalización de CU-013)
 
 \begin{longtable}{|p{16cm}|}
 \hline
-\textbf{Caso de uso: Añadir Notificación} \\
+\textbf{Caso de uso: Añadir Miembro (Generalización de CU-013)} \\
 CU-014 \\
 \hline
 \endfirsthead
 
 % Encabezado para páginas siguientes
 \hline
-\textbf{Caso de uso: Añadir Notificación (continuación)} \\
+\textbf{Caso de uso: Añadir Miembro (Generalización de CU-013) (continuación)} \\
 CU-014 \\
 \hline
 \endhead
@@ -975,11 +990,11 @@ CU-014 \\
 \endlastfoot
 
 \textbf{Breve Descripción} \\
-Permite configurar notificaciones automáticas por correo electrónico que serán enviadas al usuario cuando se supere el límite establecido por el usuario \\
+Especialización de "Gestionar Miembros" para agregar un nuevo miembro familiar al grupo, asignando rol y límites iniciales. Hereda el flujo genérico y detalla la acción de creación. \\
 \hline
 
 \textbf{Actores principales} \\
-Miembro Familiar \\
+Administrador \\
 \hline
 
 \textbf{Actores secundarios} \\
@@ -988,93 +1003,56 @@ Ninguno \\
 
 \textbf{Precondiciones} \\
 \begin{enumerate}[leftmargin=*]
-\item El usuario debe haber iniciado sesión.
-\item Debe existir al menos un límite de sobrepresupuesto previamente configurado.
-\item El usuario debe haber registrado un correo electrónico válido en su perfil.
+\item El actor (Administrador) debe estar autenticado.
+\item El actor accede a la GUI de perfiles.
 \end{enumerate} \\
 \hline
 
 \needspace{15\baselineskip}
 \textbf{Flujo Principal} \\
 \begin{enumerate}[leftmargin=*]
-\item El usuario selecciona la opción "Añadir notificación" desde la pestaña donde estableció el límite de sobrepresupuesto.
-\item El sistema muestra las opciones de eventos disponibles para asociar la notificación (Umbral de días antes o de monto máximo).
-\item El usuario selecciona el evento deseado (ej.: "cuando se supere el límite de S/300").
-\item El usuario confirma que desea recibir alertas por email.
-\item El sistema valida la dirección de correo asociada al usuario.
-\item El sistema guarda la configuración de la notificación.
-\item El sistema muestra un mensaje de confirmación indicando que la notificación ha sido añadida exitosamente.
+\item Hereda los pasos 1-4 y 7 de CU-016.
+\item Extensión agregar miembro:
+\begin{enumerate}
+\item En la ventana de registro aparecerán los campos:
+\begin{itemize}
+\item Nombre (solo se permiten caracteres alfabéticos [A-Za-z])
+\item Fecha de nacimiento
+\item Rol (se selecciona un rol: miembro o administrador)
+\item Contraseña: Mínimo 5 caracteres, con al menos 1 mayúscula, 1 número y 1 carácter especial (.,:[]{}\*+./\#\$\%\&/()=?¿¡!~).
+\end{itemize}
+\item Aparecerá un botón que diga "agregar nuevo límite de gasto" para agregar límites a cada usuario por concepto, si el usuario hace click ahí aparecerán los campos:
+\begin{itemize}
+\item Concepto (se selecciona un concepto existente)
+\item Periodo (se escoge la frecuencia: mensual, diaria, semanal)
+\item Límite (se ingresa sólo números indicando el límite)
+\item Consumo actual (el sistema mostrará cuánto ya van gastando actualmente en ese concepto)
+\end{itemize}
+\item El sistema validará si los datos fueron ingresados correctamente y se llamará al caso de uso Asignar límite de usuario (CU-015).
+\item Si el sistema valida correctamente los datos:
+\begin{enumerate}
+\item Se guardarán los datos en la base de datos
+\item Se crea un nuevo usuario miembro familiar
+\item Se mostrará una alerta que indique que el proceso ha sido exitoso
+\end{enumerate}
+\item Si no, (Else)
+\begin{enumerate}
+\item Se mostrará una alerta indicando que hubo un error con los datos
+\item Se resaltará en rojo los inputs con los datos que no pasaron la validación
+\end{enumerate}
+\end{enumerate}
 \end{enumerate} \\
 \hline
 
 \textbf{Postcondiciones} \\
-\begin{enumerate}[leftmargin=*]
-\item La notificación queda registrada en el sistema y vinculada al evento seleccionado.
-\item El sistema queda listo para enviar un correo electrónico automáticamente cuando la condición se cumpla.
-\end{enumerate} \\
+Ninguna \\
 \hline
 
 \textbf{Flujos Alternativos} \\
-\begin{itemize}[leftmargin=*]
-\item \textbf{A1. Correo inválido:}
-\begin{enumerate}
-\item Si la dirección de email no es válida, el sistema muestra un error.
-\item El usuario debe actualizar su información de contacto antes de continuar.
-\end{enumerate}
-\item \textbf{A2. Cancelación del usuario:}
-\begin{enumerate}
-\item El usuario puede cancelar la configuración en cualquier momento antes del paso 6.
-\item El sistema no guarda cambios.
-\end{enumerate}
-\item \textbf{A3. Error de servicio de email:}
-\begin{enumerate}
-\item Si al intentar guardar la notificación no hay conexión con el servidor de correo, el sistema muestra un mensaje de error y registra el fallo.
-\item El usuario puede reintentar más tarde.
-\end{enumerate}
-\end{itemize} \\
-\hline
-\end{longtable}
-
-## CU-015 Asignar Límites de Sobrepresupuesto
-
-\begin{longtable}{|p{16cm}|}
-\hline
-\textbf{Caso de uso: Asignar Límites de Sobrepresupuesto} \\
-CU-015 \\
-\hline
-\textbf{Breve Descripción} \\
-Permite que el usuario defina un límite de gasto máximo (sobrepresupuesto) para un miembro o para un concepto específico de la economía familiar. El sistema registra el límite y, opcionalmente, activa una notificación cuando dicho límite se alcanza o supera \\
-\hline
-\textbf{Actores principales} \\
-Miembro Familiar \\
-\hline
-\textbf{Actores secundarios} \\
 Ninguno \\
 \hline
-\textbf{Precondiciones} \\
-\begin{enumerate}[leftmargin=*]
-\item El usuario debe haber iniciado sesión.
-\item Debe existir al menos un miembro y un concepto previamente creado.
-\item El usuario debe tener permisos para editar o asignar límites.
-\end{enumerate} \\
-\hline
-\textbf{Flujo Principal} \\
-\begin{enumerate}[leftmargin=*]
-\item El usuario selecciona la opción de Asignar Límite en la aplicación para un miembro o concepto en específico.
-\item El sistema muestra la lista de miembros y/o conceptos disponibles.
-\item El usuario selecciona el miembro o concepto al que desea asignar el límite.
-\item El usuario ingresa el valor del límite (ejemplo: S/300).
-\item El sistema valida que el valor ingresado sea numérico y mayor que cero.
-\item El usuario confirma la acción.
-\item Si el usuario marca la opción para activar notificaciones al alcanzar el límite, se deriva al caso de uso CU-014.
-\item El sistema guarda el límite en la base de datos.
-\item El sistema confirma que el límite ha sido asignado correctamente.
-\end{enumerate} \\
-\hline
-\textbf{Postcondiciones} \\
-\begin{enumerate}[leftmargin=*]
-\item El límite queda registrado en el sistema y asociado al miembro/concepto.
-\item Si se activó la notificación, queda configurado el evento para ser disparado cuando se alcance el umbral.
-\end{enumerate} \\
+
+\textbf{Prioridad} \\
+Alta \\
 \hline
 \end{longtable}
