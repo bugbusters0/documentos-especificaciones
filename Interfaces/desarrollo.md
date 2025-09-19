@@ -42,7 +42,7 @@
 | **ID:** | GUI.4.1 |
 | **Nombre:** | Entrada Diaria |
 | **Descripción:** | La interfaz de Entrada Diaria permite visualizar y registrar los movimientos financieros del día. El usuario puede alternar entre las vistas Ingresos, Gastos y Resumen. <br> - En las vistas de **Ingresos/Gastos**, la interfaz se organiza en dos columnas: la primera muestra un formulario para registrar o editar un movimiento (monto, concepto y detalles), mientras que la segunda presenta un listado de los movimientos ingresados durante la fecha seleccionada.<br> - En la vista de **Resumen**, se muestran en columnas los ingresos y gastos del día junto con el total acumulado. <br>En la parte superior se encuentra el selector de fecha, configurado por defecto en el día actual. |
-| **Restricciones / Reglas / Validaciones:** |  1. El menú lateral y encabezado de usuario se mantienen.<br> 2. El periodo seleccionado determina los datos visibles en ingresos, gastos y balance.<br>3. Los montos deben calcularse automáticamente a partir de los movimientos registrados en la base de datos.<br>4. El resumen de balance debe actualizarse en tiempo real al agregar, editar o eliminar movimientos.<br> 5. El campo *Detalles* es opcional en el registro o edición de un ingreso/gasto. 
+| **Restricciones / Reglas / Validaciones:** |  1. El menú lateral y encabezado de usuario se mantienen.<br> 2. El periodo seleccionado determina los datos visibles en ingresos, gastos y resumen.<br>3.  Se actualizan balances familiar y personal. <br> 4. El campo *Detalles* es el único campo opcional en el registro o edición de un ingreso/gasto. <br> 5. El monto ingresado debe ser mayor a 0.
 
 **TABLA V: INTERFAZ DE USUARIO – CONCEPTOS**
 
