@@ -7,7 +7,7 @@ author:
   - "Silva Murillo Rodrigo Antonio"
   - "Valdivia Castillo, José Miguel"
   - "Villar Ticona, Pamela Allison"
-date: "17 de Septiembre de 2025"
+date: "19 de Septiembre de 2025"
 documentclass: article
 geometry: "margin=1.5cm"
 fontsize: 12pt

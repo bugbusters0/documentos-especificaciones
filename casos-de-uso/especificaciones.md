@@ -1,4 +1,4 @@
-# Especificaciones de casos de
+# Especificaciones de casos de uso
 
 ## CU-001 Iniciar sesión
 
@@ -63,7 +63,7 @@ Ninguno \\
 CU-002 \\
 \hline
 \textbf{Breve Descripción} \\
-Permite que un usuario salga del sistema \\
+Permite que el usuario finalice su sesión activa en el sistema, asegurando el cierre seguro de su cuenta y la protección de su información personal. \\
 \hline
 \textbf{Actores principales} \\
 Miembro Familiar \\
@@ -176,7 +176,7 @@ CU-004 \\
 \endlastfoot
 
 \textbf{Breve Descripción} \\
-Permite al usuario consultar el resumen económico de ingresos, egresos y balances, visualizado por fecha o por concepto \\
+Permite al usuario consultar el resumen económico de ingresos, gastos y balances, visualizado por fecha o por concepto \\
 \hline
 
 \textbf{Actores principales} \\
@@ -199,13 +199,13 @@ Ninguno \\
 \begin{enumerate}[leftmargin=*]
 \item \textbf{Acceso a la pantalla Balance}
 \begin{enumerate}
-\item El usuario selecciona la opción "Balance" desde el menú (GUI-04).
+\item El usuario selecciona la opción "Balance" desde el menú (GUI-03).
 \item El sistema carga la pantalla Balance, mostrando la pestaña de tablas por defecto.
 \end{enumerate}
 
 \item \textbf{Carga inicial de datos}
 \begin{enumerate}
-\item El sistema consulta los ingresos y egresos de la base de datos para el intervalo predeterminado (esta semana).
+\item El sistema consulta los ingresos y gastos de la base de datos para el intervalo predeterminado (esta semana).
 \item El sistema muestra filtros de intervalo: Esta semana (predeterminado), Este mes, Este año, Personalizado.
 \end{enumerate}
 
@@ -222,12 +222,12 @@ Ninguno \\
 \begin{itemize}
 \item Si el usuario es Administrador:
 \begin{itemize}
-\item El sistema obtiene ingresos y egresos de todos los miembros familiares.
+\item El sistema obtiene ingresos y gastos de todos los miembros familiares.
 \item Cada miembro se representa con un color único y un ícono con su inicial.
 \end{itemize}
 \item Si no es Administrador:
 \begin{itemize}
-\item El sistema obtiene solo los ingresos y egresos del usuario.
+\item El sistema obtiene solo los ingresos y gastos del usuario.
 \end{itemize}
 \end{itemize}
 
@@ -236,9 +236,9 @@ Ninguno \\
 \item El sistema ordena los registros cronológicamente.
 \item El sistema muestra:
 \begin{itemize}
-\item Ingresos: Monto, categoría, detalles, fecha. Subtotales por miembro y total global.
-\item Egresos: Monto, categoría, detalles, fecha. Subtotales por miembro y total global.
-\item Balance: Resultado (ingresos menos egresos) mensual y anual. Total por miembro y global.
+\item Ingresos: Monto, conceptos, detalles, fecha. Subtotales por miembro y total global.
+\item gastos: Monto, conceptos, detalles, fecha. Subtotales por miembro y total global.
+\item Balance: Resultado (ingresos menos gastos) mensual y anual. Total por miembro y global.
 \end{itemize}
 \end{enumerate}
 
@@ -248,8 +248,8 @@ Ninguno \\
 \item El sistema muestra:
 \begin{itemize}
 \item Ingresos por Concepto: Lista de movimientos agrupados. Subtotales por concepto, miembro y global.
-\item Egresos por Concepto: Lista de movimientos agrupados. Subtotales por concepto, miembro y global.
-\item Balance: Resultado (ingresos menos egresos) mensual y anual. Total por miembro y global.
+\item gastos por Concepto: Lista de movimientos agrupados. Subtotales por concepto, miembro y global.
+\item Balance: Resultado (ingresos menos gastos) mensual y anual. Total por miembro y global.
 \end{itemize}
 \end{enumerate}
 
@@ -276,11 +276,11 @@ Ninguno \\
 \item \textbf{B. Visualización de datos:}
 \begin{enumerate}[leftmargin=*]
 \item El usuario selecciona la pestaña o botón "Gráficos" en la pantalla de Balance.
-\item El sistema carga los datos previamente obtenidos en la consulta (ingresos, egresos, balances).
+\item El sistema carga los datos previamente obtenidos en la consulta (ingresos, gastos, balances).
 \item El sistema genera visualizaciones gráficas, entre ellas:
 \begin{itemize}
-\item Gráfico de barras o columnas: muestra los ingresos y egresos por cada miembro o concepto (con colores asignados).
-\item Gráfico circular: muestra la distribución de los ingresos/egresos por concepto o por miembro (con colores asignados).
+\item Gráfico de barras o columnas: muestra los ingresos y gastos por cada miembro o concepto (con colores asignados).
+\item Gráfico circular: muestra la distribución de los ingresos/gastos por concepto o por miembro (con colores asignados).
 \end{itemize}
 \item Si el usuario tiene rol Administrador:
 \begin{enumerate}
@@ -326,7 +326,7 @@ CU-005 \\
 \endlastfoot
 
 \textbf{Breve Descripción} \\
-Permite al integrante realizar operaciones sobre los conceptos de ingresos o egresos \\
+Permite al integrante realizar operaciones sobre los conceptos de ingresos o gastos \\
 \hline
 
 \textbf{Actores principales} \\
@@ -347,7 +347,7 @@ Ninguno \\
 \textbf{Flujo Principal} \\
 \begin{enumerate}[leftmargin=*]
 \item Este caso es abstracto y se especializa en subcasos específicos.
-\item El miembro al acceder a Conceptos (GUI3) tiene la opción de crear un Nuevo concepto (CU-006) o Editar un concepto existente (CU-007).
+\item El miembro al acceder a Conceptos (GUI5) tiene la opción de crear un Nuevo concepto (CU-006) o Editar un concepto existente (CU-007).
 \end{enumerate} \\
 \hline
 
@@ -407,9 +407,9 @@ Ninguno \\
 \needspace{15\baselineskip}
 \textbf{Flujo Principal} \\
 \begin{enumerate}[leftmargin=*]
-\item El miembro selecciona "Nuevo" en la sección Conceptos (GUI3).
-\item El miembro ingresa el nombre, tipo (ingreso/egreso), periodo ('Diario', 'Semanal', 'Mensual' u 'Ocasional') y presupuesto (si aplica).
-\item El miembro puede limitar el monto de gasto para el concepto si es de tipo 'Egreso' y periodo diferente a 'Diario' (CU-018).
+\item El miembro selecciona "Nuevo" en la sección Conceptos (GUI5).
+\item El miembro ingresa el nombre, tipo (ingreso/gasto), periodo ('Diario', 'Semanal', 'Quincenal' o 'Mensual') y presupuesto (si aplica).
+\item El miembro puede limitar el monto de gasto para el concepto si es de tipo 'Gasto' y periodo diferente a 'Diario' (CU-017).
 \item El sistema guarda el concepto.
 \end{enumerate} \\
 \hline
@@ -477,9 +477,9 @@ Ninguno \\
 \needspace{15\baselineskip}
 \textbf{Flujo Principal} \\
 \begin{enumerate}[leftmargin=*]
-\item El miembro selecciona "Editar" en un concepto existente (GUI3).
+\item El miembro selecciona "Editar" en un concepto existente (GUI5).
 \item El miembro modifica los detalles (nombre, tipo, periodo, presupuesto).
-\item El miembro puede limitar el monto de gasto para el concepto si es de tipo 'Egreso' y periodo diferente a 'Diario' (CU-018).
+\item El miembro puede limitar el monto de gasto para el concepto si es de tipo 'Gasto' y periodo diferente a 'Diario' (CU-017).
 \item El sistema actualiza el concepto.
 \end{enumerate} \\
 \hline
@@ -611,12 +611,12 @@ Ninguno \\
 \textbf{Flujo Principal} \\
 \begin{enumerate}[leftmargin=*]
 \item El usuario ingresa a la pestaña Entrada Diaria (GUI4).
-\item El sistema muestra las tres opciones para seleccionar: Ingresos, Gastos y Hoy.
+\item El sistema muestra las tres opciones para seleccionar: Ingresos, Gastos y Resumen.
 \item Si el usuario seleccionó Ingresos o Gastos:
 \begin{itemize}
 \item El sistema muestra dos paneles, en el izquierdo un formulario para nuevo movimiento y en el derecho la lista de movimientos registrados del día seleccionado.
 \end{itemize}
-\item Si el usuario seleccionó Hoy:
+\item Si el usuario seleccionó Resumen:
 \begin{itemize}
 \item El sistema muestra dos columnas con ingresos y gastos del día.
 \end{itemize}
@@ -752,7 +752,7 @@ CU-011 \\
 \endlastfoot
 
 \textbf{Breve Descripción} \\
-Permite al miembro familiar modificar un ingreso o gasto previamente registrado desde la lista del día (Ingresos, Gastos u Hoy) \\
+Permite al miembro familiar modificar un ingreso o gasto previamente registrado desde la lista del día (Ingresos, Gastos u Resumen) \\
 \hline
 
 \textbf{Actores principales} \\
@@ -767,7 +767,7 @@ Ninguno \\
 \begin{enumerate}[leftmargin=*]
 \item El usuario debe haber iniciado sesión.
 \item El usuario debe haber ingresado a la GUI-4.
-\item El área seleccionada es Ingresos, Gastos u Hoy.
+\item El área seleccionada es Ingresos, Gastos u Resumen.
 \item Se debe tener movimientos previamente registrados.
 \end{enumerate} \\
 \hline
@@ -775,9 +775,9 @@ Ninguno \\
 \needspace{15\baselineskip}
 \textbf{Flujo Principal} \\
 \begin{enumerate}[leftmargin=*]
-\item El usuario selecciona un movimiento en el panel derecho (Ingreso/Gastos) o en la pestaña Hoy.
+\item El usuario selecciona un movimiento en el panel derecho (Ingreso/Gastos) o en la pestaña Resumen.
 \item El usuario hace clic en el ícono de editar.
-\item Si el movimiento a editar se encuentra en la pestaña Hoy:
+\item Si el movimiento a editar se encuentra en la pestaña Resumen:
 \begin{enumerate}
 \item Si el clic se dio en un movimiento de ingreso, se redirige a la pestaña Ingreso.
 \item Si el clic se dio en un movimiento de gasto, se redirige a la pestaña Gasto.
@@ -856,7 +856,7 @@ Ninguno \\
 \begin{enumerate}[leftmargin=*]
 \item El usuario debe haber iniciado sesión.
 \item El usuario debe haber ingresado a la GUI-4.
-\item El área seleccionada es Ingresos, Gastos u Hoy.
+\item El área seleccionada es Ingresos, Gastos u Resumen.
 \item Se debe tener movimientos previamente registrados.
 \end{enumerate} \\
 \hline
@@ -864,7 +864,7 @@ Ninguno \\
 \needspace{15\baselineskip}
 \textbf{Flujo Principal} \\
 \begin{enumerate}[leftmargin=*]
-\item El usuario selecciona un movimiento en el panel derecho (Ingreso/Gastos) o en la pestaña Hoy.
+\item El usuario selecciona un movimiento en el panel derecho (Ingreso/Gastos) o en la pestaña Resumen.
 \item El usuario hace clic en el ícono de eliminar.
 \item El sistema solicita una confirmación ("¿Estás seguro de eliminar el movimiento?").
 \item El usuario confirma la acción.
@@ -1057,19 +1057,19 @@ Alta \\
 \hline
 \end{longtable}
 
-## CU-017 Editar Miembro (Generalización de CU-013)
+## CU-015 Editar Miembro (Generalización de CU-013)
 
 \begin{longtable}{|p{16cm}|}
 \hline
 \textbf{Caso de uso: Editar Miembro (Generalización de CU-013)} \\
-CU-017 \\
+CU-015 \\
 \hline
 \endfirsthead
 
 % Encabezado para páginas siguientes
 \hline
 \textbf{Caso de uso: Editar Miembro (Generalización de CU-013) (continuación)} \\
-CU-017 \\
+CU-015 \\
 \hline
 \endhead
 
